@@ -1,0 +1,25 @@
+.box-container{
+  display: flex;
+  align-items: center;
+  height:50px;
+  padding:50px;
+}
+
+.box-item{
+  width:20%;
+  height:10%;
+  font-weight: 900;
+}
+
+@media screen and (max-width:1200px) {
+  .box-container{
+  }
+}
+
+@media screen and (max-width:576px) {
+  .box-container{
+    flex-direction: column;
+    height:200vw;
+    width:200%;
+  }
+}
