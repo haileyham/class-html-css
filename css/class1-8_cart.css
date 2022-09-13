@@ -1,0 +1,87 @@
+body{
+  margin:0;
+}
+
+/* td,th{
+  border: 1px solid black;
+} */
+
+table{
+  border-collapse: collapse;
+  border-radius:7px;
+  border-style: hidden;
+  box-shadow: 0 0 0 1px rgba(0,0,0,0);
+}
+/*table벌어진거 줄여줌*/
+/*border-collapse 적용 시 radius 안 될 수도..그때 collapse밑에 것들 적용*/
+
+.cart-background{
+  width:100%;
+  background-color: #c2d3de;
+  padding:30px;
+}
+
+.cart-table{
+  width:100%;
+  max-width: 700px;
+  margin: auto;
+  background: white;
+  border-radius: 10px;
+}
+
+.cart-table td,.cart-table th{
+  padding:15px;
+  border-bottom: 1px solid #c2d3de;
+}
+
+.cart-table th:nth-child(2){
+  width:400px;
+}
+
+/* .cell-long{
+  width:700px;
+} */
+/* 위랑동일 */
+.btn{
+  padding:15px;
+  font-size: 20px;
+  border: none;
+  border-radius: 10px;
+  background-color: coral;
+  color: white;
+  cursor: pointer;
+}
+
+.btn:hover{
+  background-color: chocolate;
+}
+
+.btn:focus{
+  background-color: gray;
+}
+
+.btn:active{
+  background-color: brown;
+}
+
+/*순서 hfa*/
+
+.input-test{
+  font-size: 20px;
+}
+
+.input-test:focus{
+  border: 2px solid red;
+}
+
+.custom-link{
+  text-decoration: none;
+}
+
+.custom-link:link{
+  color:aqua;
+}
+
+.custom-link:visited{
+  color:black;
+}

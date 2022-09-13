@@ -1,0 +1,141 @@
+body{
+  margin: 0px;
+}
+
+div{
+  box-sizing: border-box;
+}
+
+.login-container{
+  width:300px;
+  height:400px;
+  margin:auto;
+  margin-top: 40px;
+  display: block;
+  background: whitesmoke;
+  position: relative;
+}
+
+.login-header {
+  width: 250px;
+  height: 80px;
+  position: absolute;
+  margin:5%;
+  margin-left: 25px;
+  padding:10px;
+  /* background: red; */
+}
+
+.login-email{
+  width: 250px;
+  height: 60px;
+  position: absolute;
+  margin:35%;
+  margin-left: 25px;
+  padding:10px;
+  /* background: gold; */
+  font-size: 13px;
+}
+
+.email-id{
+  border: 1px solid gainsboro;
+  border-radius: 5px;
+  padding: 5px 60px 5px 5px;
+  font-size: 13px;
+  margin-top: 3px;
+}
+
+.login-name{
+  width: 250px;
+  height: 60px;
+  position: absolute;
+  margin:60%;
+  margin-left: 25px;
+  padding:0px; /*여기말고 밑에 first-name-box에 padding 10px줌*/
+  /* background: green; */
+  font-size: 13px;
+}
+
+.first-name-box{
+  width:120px;
+  height:60px;
+  padding:10px;
+  /* background: red; */
+  float: left;
+}
+
+.last-name-box{
+  width:120px;
+  height:60px;
+  padding:10px;
+  /* background: darkcyan; */
+  float: left;
+}
+
+.first-name{
+  border: 1px solid gainsboro;
+  border-radius: 5px;
+  padding:3px;
+  width: 100px;
+}
+
+.last-name{
+  border: 1px solid gainsboro;
+  border-radius: 5px;
+  padding:3px;
+  width: 100px;
+}
+
+.login-message{
+  width: 250px;
+  height: 60px;
+  position: absolute;
+  margin:85%;
+  margin-left: 25px;
+  padding:10px;
+  /* background: pink; */
+  font-size: 13px;
+}
+
+.login-message-text{
+  padding: 5px 6px 25px 60px;
+  border: 1px solid gainsboro;
+  border-radius: 5px;
+}
+
+.login-footer{
+  width: 250px;
+  height: 60px;
+  position: absolute;
+  margin:110%;
+  margin-left: 25px;
+  padding:10px;
+  /* background: blue */
+}
+
+.login-checkbox{
+  width:10px;
+  margin:0px;
+  position: relative;
+}
+
+.login-checkbox-text{
+  font-size: 11px;
+  position: absolute;
+  margin-left:5px;
+  margin-top: 3px;
+}
+
+.login-send{
+  position:absolute;
+  margin-left:60%;
+  margin-top: -20px;
+}
+
+.login-send-button{
+  color: white;
+  background-color: orange;
+  border: none;
+  border-radius: 5px;
+  padding:3px 20px;
+}

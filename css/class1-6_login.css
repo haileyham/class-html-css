@@ -1,0 +1,57 @@
+body{
+  margin:0px;
+}
+
+div,input,textarea{
+  box-sizing: border-box;
+}
+
+
+.form-background{
+  background-color: black;
+  padding:30px;
+}
+
+.form-white{
+  background-color: white;
+  padding:30px;
+  width: 80%;
+  max-width: 600px;
+  margin: auto;
+}
+
+.box-top{
+  padding:5px;
+  width:100%; /*--그냥넣음--*/
+}
+
+.form-input{
+  width:100%;
+  padding:10px;
+  font-size:20px;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+.box-left{
+  width:50%;
+  float: left;
+  padding:5px;
+}
+
+.box-right{
+  width:50%;
+  float: left;
+  padding:5px;
+}
+
+.yello-button{
+  padding:10px;
+  display: block;
+  margin-left: auto;
+  float:right;
+  margin-right:3px;
+  background-color: rgb(250,150,80);
+  border:none;
+  border-radius: 5px;
+}
