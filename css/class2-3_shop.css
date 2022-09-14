@@ -317,11 +317,59 @@ div,input,textarea{
 
 .shop-item img{
   width:100%; /*상품사진 크기조정*/
+  display: block; 
+  /*밑의 overlay깔았을때, 사진보다 살짝 더 크게 그려지는 이유는 보이지않는 선같은게 있어서임.
+  그거 없애고 크기 맞추기 위해서 display:block;설정*/
 }
 
 .overlay{
   position:absolute;
   width:100%;
   height: 100%;
-  background: black;
+  background: rgba(0,0,0,0.5);
+  opacity: 0;
+  /*투명도 조정 0 투명 ~ 1 완전불투명*/
+  /*애니메이션 시작 0 ~ 끝 1*/
+  transition: all 1s;
+  /*애니메이션 transition주는 것 : all뜻 > 위에있는것들중 스타일뭔가가 변하면 애니메이션 변화주세요~*/
+  /* transition-timing-function: cubic-bezier(0,-0.5,1,1); */
+  /*위에것 : 애니메이션 바뀌는 속도 그래프로 조정할수있는것*/
+}
+
+.overlay:hover{
+  opacity:1;
+}
+/*끝났을때 이렇게 완전불투명도로 바뀌게*/
+/*애니메이션 주는 순서 : 1. 시작스타일 만들기/2.최종스타일 만들기/3.언제최종으로변경할지/4.transition주기*/
+.overlay2-wrap{
+  position:absolute;
+  width:100%;
+  height: 100%;
+  overflow: hidden;
+  /*넘치는 부분 가려줌*/
+}
+
+.overlay2-wrap:hover .overlay-black{
+  margin-top: 50%;
+}
+
+.overlay-black{
+  width:100%;
+  height: 50%;
+  background-color: rgba(0,0,0,0.3);
+  margin-top:100%; /*시작스타일 밑에 두기  but 밑에 넘치는부분 존재
+  위에 부모태그에 overflow:hidden을 주면 벗어나는 범위 가려줌*/
+  transition: all 1s;
+  /*밑에서 위로 올라오게 하기 from에 transform:translate넣고, to에 transform:none넣기*/
+  /*css만으로는 마우스 댔을때 등 정도밖에 구현못함
+  마우스 클릭시 등 다양한 것 만들기 위해서는 JavaScript사용해야함*/
+}
+
+.overlay-black span{
+  padding:50px;
+  color: white;
+  text-align: center;
+  font-size: 30px;
+  display: flex;
+  /*글씨 수직 옮기려면 flex넣어야 움직이더라*/
 }
