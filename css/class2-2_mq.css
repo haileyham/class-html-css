@@ -58,3 +58,14 @@
 (pc일때 25%, 태블릿 50%, 모바일 100% 한칸에 채우는 정도임)
 부모태그에 flex-wrap넣기
 부모태그에 text-align:center;하기*/
+
+.product-container i{
+  background-color: burlywood;
+  width:100px;
+  height:100px;
+  border-radius: 50px; /*아이콘뒷배경 원형*/
+  padding-top: 25px; /*아이콘 위치 조정*/
+  box-sizing: border-box; /*아이콘 밑에 자리 차지하는거 있는듯하여 조정해주기*/
+  color: white;
+  margin-top: 20px;
+}
