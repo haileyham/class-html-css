@@ -1,4 +1,4 @@
-.box-container{
+/* .box-container{
   display: flex;
   align-items: center;
   height:50px;
@@ -22,4 +22,39 @@
     height:200vw;
     width:200%;
   }
+} */
+
+.product-container{
+  width:80%;
+  max-width:1000px;
+  margin:auto;
+  magin-top:50px;
+  margin-bottom: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
 }
+
+.product-container div{
+  width:25%;
+}
+
+@media screen and (max-width:1200px){
+  .product-container div{
+    width:50%;
+  }
+}
+
+/*flex사용할 때 태블릿 2*2하고싶으면
+부모에 flex-wrap,태블릿 미디어쿼리에 width 50%주기*/
+
+@media screen and (max-width:576px){
+  .product-container div{
+    width:100%;
+  }  
+}
+
+/*flex로 pc,태블릿,모바일 설정할 때 width로 조정하기 
+(pc일때 25%, 태블릿 50%, 모바일 100% 한칸에 채우는 정도임)
+부모태그에 flex-wrap넣기
+부모태그에 text-align:center;하기*/
