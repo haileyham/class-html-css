@@ -193,8 +193,8 @@ class여러개 적용 가능, media query문법 여러개 사용가능 (큰사�
   width:80%;
   max-width:1000px;
   margin:auto;
-  magin-top:50px;
-  margin-bottom: 50px;
+  margin-top:-20px;
+  margin-bottom: 100px;
   display: flex;
   flex-wrap: wrap;
   text-align: center;

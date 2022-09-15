@@ -38,6 +38,8 @@
 .product-container div{
   width:25%;
 }
+/*노트북14인치에서 적용안되는 현상 >
+그냥 화면이 작아서 그런줄알았는데 인터넷확대가 110%였었따... 100%확대가 안되어있었음..ㅠ*/
 
 @media screen and (max-width:1200px){
   .product-container div{
