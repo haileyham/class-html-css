@@ -2,9 +2,59 @@ body{
   margin: 0px;
 }
 
+div{
+  box-sizing: border-box;
+}
+
+
 .main-background{
   width: 100%;
   height: 500px;
-  background: rgb(73,152,220);
+  background: linear-gradient(rgb(73,152,220), rgb(100,98,200));
+  /*gradient사용하기*/
+  position: relative;
 }
+
+.main-container{
+  width: 400px;
+  height:200px;
+  margin:90px;
+  /* background: pink; */
+  text-align: left;
+  color:white;
+  position:absolute;
+}
+
+.main-img{
+  width:350px;
+  margin-left:800px;
+  margin-top: 119px;
+  position:absolute;
+}
+
+.main-title{
+  font-size: 27px;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.main-container p{
+  font-size:14px;
+  margin-bottom: 20px;
+}
+
+.main-button{
+  background: rgb(70,70,70);
+  color:white;
+  font-size: 12px;
+  border: none;
+  border-radius: 5px;
+  padding:13px 20px;
+  
+}
+
+
+
+
+
 
