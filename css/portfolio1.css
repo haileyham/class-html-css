@@ -1,5 +1,10 @@
+body{
+  margin: 0px;
+}
+
 .main-background{
   width: 100%;
-  height: 100px;
+  height: 500px;
   background: rgb(73,152,220);
 }
+
