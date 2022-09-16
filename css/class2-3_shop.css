@@ -363,6 +363,10 @@ div,input,textarea{
   /*밑에서 위로 올라오게 하기 from에 transform:translate넣고, to에 transform:none넣기*/
   /*css만으로는 마우스 댔을때 등 정도밖에 구현못함
   마우스 클릭시 등 다양한 것 만들기 위해서는 JavaScript사용해야함*/
+  /*overlay2-wrap은 흰색 투명(마우스클릭+이미지 변함없기위함)
+  overlay-black이 to 이고 
+  img가 from임 
+  작동은 overlay2-wrap:hover .overlay-black이걸로*/
 }
 
 .overlay-black span{
