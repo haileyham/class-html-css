@@ -53,8 +53,227 @@ div{
   
 }
 
+/*반응형으로 만들기 어려움. 어떻게 짜야할지를 모르겠음. 일단 페이지 내보고
+그다음에 반응형으로 다시 만들어봐야곘다.
+기존에서 main-background부터 다시 짜봐야겠다. > flex로 두개 나눠서 그안에서 움직이도록 해봐야할듯*/
+
+
+.middle-background{
+  width:100%;
+  background: white;
+}
+
+.middle-container{
+  width:50%;
+  margin:auto;
+  padding:50px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.middle-button{
+  color:white;
+  font-size: 12px;
+  padding:10px 15px;
+  background: rgb(70,70,70);
+  border: none;
+  border-radius: 5px;
+  margin:5px;
+}
 
 
 
 
 
+.offer-background{
+  width:100%;
+  background: rgb(100,98,200)
+}
+
+.offer-title{
+  width:30%;
+  height:40%;
+  margin:auto;
+  padding-top: 50px;
+  text-align: center;
+  color: white;
+}
+
+.offer-title p{
+  margin:0px;
+}
+
+.offer-title h3{
+  margin:0px;
+}
+
+.offer-container{
+  width:80%;
+  height:60%;
+  /* background: pink; */
+  padding-bottom:50px;
+  margin:auto;
+  display:flex;
+  /*부모태그에 flex주기*/
+  flex-wrap: wrap;
+}
+
+.offer-iconbox{
+  width: 25%;
+  height: 160px;
+  /* background: yellow; */
+  padding-top:10px;
+  text-align: center;
+}
+
+@media screen and (max-width:1200px){
+  .offer-iconbox{
+    width:50%;
+  }
+}
+
+@media screen and (max-width:576px){
+  .offer-iconbox{
+    width:100%;
+  }  
+}
+
+.offer-iconbox i{
+  width:80px;
+  height:80px;
+  padding:10px;
+  background: white;
+  border-radius: 50px;
+  box-sizing: border-box;
+  padding-top:25px;
+  margin-top:10px;
+  color:rgb(100,98,200);
+}
+/*i태그에 직접 배경화면 설정하기 div로 두를 필요없음*/
+
+.offer-iconbox h4{
+  margin:5px;
+  color:white;
+}
+
+.offer-iconbox p{
+  margin:5px;
+  color:white;
+  font-size: 10px;
+}
+
+
+
+
+.do-background{
+  width: 100%;
+  background: white;
+  padding-top:50px;
+}
+
+.do-title{
+  width: 30%;
+  height:20%;
+  margin: auto;
+  /* background: pink; */
+  font-size: 14px;
+  text-align: center;
+}
+
+.do-title p,h3{
+  margin:0px;
+}
+
+.do-container{
+  width: 80%;
+  display:flex;
+  padding-top:20px;
+  padding-bottom:50px;
+  /* background: orange; */
+  margin:auto;
+  flex-wrap: wrap;
+  /*흘러내리게 이거 설정안하면 밑에 do-item에 width 50%줘도 한줄4개임*/
+}
+
+.do-item{
+  width:50%;
+  padding:0px;
+}
+
+.do-item img{
+  width:100%;
+  display:block;
+  /*사진 튀어나온곳 ! 까먹지말기*/
+}
+
+.do-item-wrap{
+  position: absolute;
+  width:100%;
+  height:100%;
+  /*전체로 쌓인줄 알았는데, 하나하나가 합쳐서 전체로 보이는 거였음.실수한줄 */
+  overflow: hidden;
+  color:white;
+}
+
+.do-item-wrap h4{
+  padding:70px 0 10px 50px;
+  margin:0;
+}
+
+.do-item-wrap p{
+  padding:30px 0 10px 50px;
+  margin:0;
+  font-size: 14px;
+}
+
+.do-item-change-line{
+  width:100%;
+  height:100%;
+  transition:all 1s;
+}
+
+.do-item-wrap:hover .do-item-change-line{
+  border: 30px white solid;
+}
+
+/*아....이미지위에 글씨는 적용시킬 수 있긴한데..
+transition 효과에 적용되지 않게
+그냥 자체적으로 이미지위에 글씨 어떻게 뜨게 하는지 모르겠다 ㅠ*/
+
+
+
+footer{
+  width:100%;
+  height:250px;
+  /* background: pink; */
+}
+
+.link-container{
+  width: 30%;
+  /* background: palevioletred; */
+  margin: auto;
+  padding:30px;
+  display:flex;
+}
+
+.link-icon{
+  width:100%;
+  padding:0px;
+  margin:auto;
+  text-align: center;
+}
+
+.link-icon i{
+  color:white;
+  background: rgb(100,98,200);
+  border-radius: 50px;
+  padding:15px;
+  box-sizing: border-box;
+}
+
+.copyright{
+  width:30%;
+  margin: auto;
+  text-align: center;
+  font-weight: 600;
+}
