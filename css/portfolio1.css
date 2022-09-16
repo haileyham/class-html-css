@@ -108,7 +108,7 @@ div{
 }
 
 .offer-container{
-  width:80%;
+  width:60%;
   height:60%;
   /* background: pink; */
   padding-bottom:50px;
@@ -249,7 +249,7 @@ footer{
 }
 
 .link-container{
-  width: 30%;
+  width: 40%;
   /* background: palevioletred; */
   margin: auto;
   padding:30px;
@@ -257,17 +257,21 @@ footer{
 }
 
 .link-icon{
-  width:100%;
+  width:25%;
+  height:80%;
   padding:0px;
   margin:auto;
   text-align: center;
 }
 
 .link-icon i{
+  width:50px;
+  height:50px;
+  /*반응형으로 할 때, 줄였을 때 가운데로하기위해서 넣움 ㅠ 이거넣어야되더라공*/
   color:white;
   background: rgb(100,98,200);
   border-radius: 50px;
-  padding:15px;
+  padding:9px;
   box-sizing: border-box;
 }
 
@@ -277,3 +281,23 @@ footer{
   text-align: center;
   font-weight: 600;
 }
+
+
+/*구현하지 못한 것 : hover이용해서 애니메이션 효과줄때 사진위에 글자 못 넣은것
+(그냥 사진위에는 글자 올릴 수 있음. but 애니메이션 효과 이용하기 위해 새로 깔고 줄 때
+애니메이션효과와 같이 글자가 묻힘. 그래서 억지로 올리면 애니메이션과 같이
+글자가 움직임. 그대로 고정이 안됨. 이부분은 review 철저히해야함.
+
+반응형 랜딩페이지로 main을 만들지 못한 것. 그래서 그냥 박혀있는 것으로 일단만듦.
+main만 빼고는 반응형으로 만들었음.
+
+중간 what we offer 아이콘의 경우 flex로 25%줘서 맞췄지만 저 간격을 줄이고 싶다면
+flex다른 칸을 더 만들어서 해도 될듯 
+>> 이거 방금 올라가서 다시 보면서
+그냥 덮고 있는 컨테이너 박스 width를 줄이니 됨. 바보였음 ㅠ
+
+금방 끝날 줄 알았는데 생각보다 하다가 수정하는 것들이 많았음.
+main부분에서 헤매느라 ...ㅠㅠ
+그냥 단순히 구색만 맞추는 것은 금방 끝나긴 할 듯ㅜㅜ
+
+아무튼 review통해서 부족한 부분 철저히 공부해야겠다.*/ 
