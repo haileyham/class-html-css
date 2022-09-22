@@ -8,6 +8,7 @@
   <link rel="icon" href="img/icon.png" type="imgage/x-icon">
   <title>shoes</title>
   <link href="css/class1-4_layout2.css" rel="stylesheet">
+  <link href="css/class1-4_layout22.css" rel="stylesheet">
 </head>
 
 <body>
@@ -38,9 +39,26 @@
 
 
 
+<!--main-title에 custom이라는 css명을 하나 더 추가 
+> 이건 덮어쓰기용인데, 같은 클래스명으로 더 밑에 작성하면 더 우선적용된다.
+(html에서 link연결할때 더 밑에있는것으로 적용해줌)
+(같은 클래스명으로 css되어있을때 더 밑에 있는 것 적용)
+(미디어쿼리의 경우도 하단에 작성해야하는 이유도 동일함)-->
 
+<!--css덮어쓸때 방법 3가지
+1. 같은 클래스명or스타일을 하단에 작성
+2. id, style등 우선순위를 높이기
+3. specificity 높여서 작성하기(대신 class명 너무 길면 안좋음)-->
+
+<!--bootstrap사용시 덮어씌기 -class추가하는게 흔함. 덮어쓰기 잘 안함
+html에 link연결할 때 bootstrap연결 밑의 css연결 할 것이기 때문에
+css class추가해서 함-->
+
+<!--좋은 코드란
+1. 나중에 수정/관리가 쉬우면 항상 좋은 코드
+2. 확장성이 좋으면 좋은 코드(재활용여부, 확장해서 다른 class만들기 쉬운지)-->
   <div class="main-background">
-    <h4 class="main-title">Buy Our Excellent Shoes! Now On Sale</h4>
+    <h4 class="main-title custom">Buy Our Excellent Shoes! Now On Sale</h4>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla repellendus saepe placeat quo delectus suscipit,
       similique mollitia? Totam enim quia officia, autem eligendi recusandae debitis beatae in vitae, quis neque.</p>
     <button class="main-button">BuyNow</button>

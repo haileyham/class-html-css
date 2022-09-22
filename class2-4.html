@@ -110,7 +110,7 @@
 <div class="container">
   <div class="row">
     <div class="col-lg-6 col-xl-3">
-      <div class="card" style="width: 18rem;">
+      <div class="card" style="width: 15rem;">
         <img src="img/photo1.jpg" class="card-img-top" alt="...">
         <div class="card-body">
           <h5 class="card-title">Card title</h5>
@@ -119,7 +119,7 @@
       </div>
     </div>
     <div class="col-lg-6 col-xl-3">
-      <div class="card" style="width: 18rem;">
+      <div class="card" style="width: 15rem;">
         <img src="img/photo1.jpg" class="card-img-top" alt="...">
         <div class="card-body">
           <h5 class="card-title">Card title</h5>
@@ -128,7 +128,7 @@
       </div>
     </div>
     <div class="col-lg-6 col-xl-3">
-      <div class="card" style="width: 18rem;">
+      <div class="card" style="width: 15rem;">
         <img src="img/photo1.jpg" class="card-img-top" alt="...">
         <div class="card-body">
           <h5 class="card-title">Card title</h5>
@@ -137,7 +137,7 @@
       </div>
     </div>
     <div class="col-lg-6 col-xl-3">
-      <div class="card" style="width: 18rem;">
+      <div class="card" style="width: 15rem;">
         <img src="img/photo1.jpg" class="card-img-top" alt="...">
         <div class="card-body">
           <h5 class="card-title">Card title</h5>
@@ -147,6 +147,9 @@
     </div>
   </div>
 </div>
+
+<!--위아래 차이점 : width:15rem;을 주었느냐 마느냐 / 줄 경우 웹사이즈 줄여도 
+박스사이즈 계속 동일, 주지 않을 경우 웹사이즈 줄여서 2열1열될때마다 박스사이즈커짐-->
 
 <div class="container">
   <div class="row">
@@ -203,6 +206,44 @@
   </div>
 </div>
 
+<br>
+<br>
+<br>
+<br>
+<br>
+<!--위아래다른점은, 위에서는 다 4칸씩 주려고 했고, 밑에서는 
+(모바일)그림2,글10,(md)그림2,글5,빈칸5를줘서 크기에 따라 다르게 설정했다.
+order에 md조건 부여하여 순서 집어넣었고, text-end로 오른쪽정렬했다. -->
+
+<div class="container">
+  <div class="row">
+    <div class="col-2 order-md-2">
+      <img src="img/author.png" width="100%">
+    </div>
+    <div class="col-10 col-md-5 order-md-1 text-md-end">
+      <p>Some quick example text to build on the card title and make up the bulk of the card's content Some quick example text to build on the card title</p>
+    </div>
+    <div class="col-md-5 order-md-3"></div>
+  </div>
+  <div class="row">
+    <div class="col-2 order-md-2">
+      <img src="img/author2.png" width="100%">
+    </div>
+    <div class="col-10 col-md-5 order-md-3">
+      <p>Some quick example text to build on the card title and make up the bulk of the card's content Some quick example text to build on the card title</p>
+    </div>
+    <div class="col-md-5 order-md-1"></div>
+  </div>
+  <div class="row">
+    <div class="col-2 order-md-2">
+      <img src="img/author3.png" width="100%">
+    </div>
+    <div class="col-10 col-md-5 order-md-1 text-md-end">
+      <p>Some quick example text to build on the card title and make up the bulk of the card's content Some quick example text to build on the card title</p>
+    </div>
+    <div class="col-md-5 order-md-3"></div>
+  </div>
+</div>
 
 
   <div class="container mb-5 mt-5">
