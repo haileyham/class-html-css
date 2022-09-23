@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <video controls poster="img/photo1.jpg" preload="metadata">
+    <source src="img/bridge.mp4" type="video/mp4">
+    <source src="img/bridge-m.webm" type="video/mp4">
+  </video>
+  <!--controls를 넣어줘야 재생버튼 나옴-->
+
+  <!--비디오 넣는 법 2개 
+    1. <video src="">하고 넣는 법
+    2. <video>
+        <source src="" type="">
+    </video>
+    2번째꺼가 좋은점 : 호환성 챙길 수 있음-->
+
+    <!--위에꺼 틀어보고 안되면 밑에꺼 틀어보세요-->
+
+    <!--웹 방문시 동영상 자동재생  autoplay muted-->
+
+    <!--웹 방문시 preload= "none" 미리다운x
+    "auto"미리다운O, "metadata" 미리다운 썸네일등 적당히-->
+
+    <!--poster="경로" 썸네일 이미지-->
+
+    <!--loop 동영상 무한반복-->
+
+    <!--style에 width 등 줄 수 있음-->
+
+
+    <audio controls muted>
+      <source src="img/bass.mp3">
+    </audio>
+
+
+
+
+
+    <div class="video-box">
+      <video class="video-container" autoplay muted loop>
+        <source src="img/bridge.mp4" type="video/mp4">
+        <source src="img/bridge-m.webm" type="video/mp4">
+      </video>
+      <h3 class="video-title">Buy Our Shoes!</h3>
+    </div>
+
+<style>
+  .video-box {
+  height: 500px;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.video-container {
+  position: absolute;
+  width : 100%;
+  top: 50%;
+  left: 50%;
+  transform : translate(-50%,-50%);
+  z-index: 0;
+}
+</style>
+
+<!--어떤 요소를 궁극의 가운데정렬을 하고 싶을 때
+
+저렇게 position absolute를 주고 top, left, transform 속성을 차례로 줍니다.
+
+그럼 position relative를 가진 부모에 대해 정가운데 위치시킬 수 있습니다.
+
+max-width, width 등으로 크기 조정을 넣는 것도 좋습니다.-->
+
+<!--overflow 의 속성 값
+overflow: visible
+overflow 의 값을 visible 로 사용 할 경우 특정 요소가 박스를 넘어 가더라도, 그대로 보여줍니다.
+
+overflow: hidden
+overflow 의 값을 hidden 으로 설정하면, 부모요소의 범위를 넘어가는 자식요소의 부분은 보이지 않도록 처리 합니다.
+
+overflow: scroll
+overflow 의 값을 scroll 로 설정 하면, 부모요소의 범위를 넘어가는 자식요소의 부분은 보이지 않지만, 그 대신 사용자가 확인 할 수 있도록 스크롤바를 표시 해줍니다.
+
+overflow: auto
+overflow 의 값을 auto 로 설정할 경우 부모요소의 범위를 넘어가는 자식요소의 부분이 있을 경우 해당 부분을 보이지 않도록 처리하고, 사용자가 해당 부분을 확인 할 수 있도록 스크롤바를 표시 합니다.-->
+
+
+</body>
+</html>

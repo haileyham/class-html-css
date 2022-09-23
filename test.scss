@@ -1,0 +1,193 @@
+@use 'reset';
+/*다른 파일에서 가져와서 한줄로 붙여넣음. css파일에는 다른파일에서 가져온 것 그대로 다 들어감*/@at-root
+//@use'파일경로';
+//_파일명에 언더바 하나 앞에 두면 css파일로 만들지 말아주세요!
+
+
+.main-bg{
+  width:100px;
+  h4{
+    font-size:16px;
+  }
+  button{
+    color:red;
+  }
+}
+//nesting문법 : 관련있는 class들 묶을 때 좋음/nesting 2개이상 중첩 ㄴㄴ헷갈림/밑에처럼 들어감 css에는
+// .main-bg {
+//   width: 100px;
+// }
+// .main-bg h4 {
+//   font-size: 16px;
+// }
+// .main-bg button {
+//   color: red;
+// }
+
+$메인칼라 : #2a4cb2;
+$기본사이즈 : 16px;
+// $main-color(영어 한국어 상관없음)
+/*$변수명에다가 값을 부여해 놓음.
+이제 background-color같은 곳에 #24cb2대신에 $메인칼라 써도 됨
+> css파일에는 #2a4cb2로 올라가있음*/
+
+
+.background{
+  background-color: $메인칼라;
+  font-size: $기본사이즈 - 2px;
+}
+
+.box{
+  font-size: ($기본사이즈 /  2);
+}
+
+//4칙연산 가능함 
+
+
+//%임시클래스
+%btn{
+  width:100px;
+  height:100px;
+  padding:20px;
+}
+
+.btn-green{
+  @extend %btn;
+  color:green;
+}
+//class전체를 복사해주는 @extend 문법
+//임시class말고 그냥 .btn써도됨 but %임시 클래스는 단독으로만 css넘어가지 않음
+
+%div-box{
+  width:200px;
+  height:200px;
+  padding:20px;
+}
+
+.box-green{
+  @extend %div-box;
+  color:green;
+}
+
+.box-green{
+  @extend %div-box;
+  color: blue;
+}
+
+.box-green{
+  @extend %div-box;
+  color: red;
+}
+
+
+
+//@mixin문법 : 긴코드를 짧은 단어로 축약할 때 씀
+//@mixin작명(){} : {}안의 긴 코드를 작명()로 축약해주세요
+
+// @mixin 작명(){
+//   font-size: 30px;
+//   letter-spacing: -1px;
+// }
+//mixin으로 축약한 작명을 @include작명으로 빼내기
+
+// @include 작명()
+
+
+//이런식으로
+/* ()안에 $구멍을 하면 
+font-size는 구멍자리가 됨. 각 include()에 구멍 넣으면 됨*/
+// @at-root
+
+@mixin 폰트스타일($구멍){
+  font-size: $구멍;
+  letter-spacing: -1px;
+}
+
+h2{
+  @include 폰트스타일(40px)
+}
+
+h3{
+  @include 폰트스타일(30px)
+}
+
+h4{
+  @include 폰트스타일(20px)
+}
+
+
+
+
+
+
+
+
+
+%list-box{
+  list-style: none;
+  border:1px gray solid;
+  width:300px;
+  height:50px;
+  line-height: 50px;  //li 박스내에서 세로 가운데 정렬
+  padding-left: 20px;
+  font-size: 20px;
+}
+
+li{
+  @extend %list-box;
+}
+
+li:active{
+  background-color: skyblue;
+  color: white;
+  border:1px skyblue solid;
+}
+
+
+
+
+%box-style{
+  border:none;
+  border-radius: 5px;
+  width:700px;
+  height:50px;
+  line-height: 50px;
+}
+
+.alert-box1{
+  @extend %box-style;
+  background: green;
+}
+
+
+.alert-box2{
+  @extend %box-style;
+  background: blue;
+}
+
+.alert-box3{
+  @extend %box-style;
+  background: orange;
+}
+
+
+
+.row{
+  display: flex;
+}
+
+%col{
+  width:50px;
+  height:50px;
+  border: solid 1px plum;
+}
+
+.col-6{
+  @extend %col;
+  width:50%;
+}
+
+.col-4{
+  @extend %col;
+  width:33.33%;
+}

@@ -1,0 +1,130 @@
+@charset "UTF-8";
+body {
+  margin: 0;
+}
+
+div {
+  box-sizing: border-box;
+}
+
+/*다른 파일에서 가져와서 한줄로 붙여넣음. css파일에는 다른파일에서 가져온 것 그대로 다 들어감*/
+.main-bg {
+  width: 100px;
+}
+.main-bg h4 {
+  font-size: 16px;
+}
+.main-bg button {
+  color: red;
+}
+
+/*$변수명에다가 값을 부여해 놓음.
+이제 background-color같은 곳에 #24cb2대신에 $메인칼라 써도 됨
+> css파일에는 #2a4cb2로 올라가있음*/
+.background {
+  background-color: #2a4cb2;
+  font-size: 14px;
+}
+
+.box {
+  font-size: 8px;
+}
+
+.btn-green {
+  width: 100px;
+  height: 100px;
+  padding: 20px;
+}
+
+.btn-green {
+  color: green;
+}
+
+.box-green {
+  width: 200px;
+  height: 200px;
+  padding: 20px;
+}
+
+.box-green {
+  color: green;
+}
+
+.box-green {
+  color: blue;
+}
+
+.box-green {
+  color: red;
+}
+
+/* ()안에 $구멍을 하면 
+font-size는 구멍자리가 됨. 각 include()에 구멍 넣으면 됨*/
+h2 {
+  font-size: 40px;
+  letter-spacing: -1px;
+}
+
+h3 {
+  font-size: 30px;
+  letter-spacing: -1px;
+}
+
+h4 {
+  font-size: 20px;
+  letter-spacing: -1px;
+}
+
+li {
+  list-style: none;
+  border: 1px gray solid;
+  width: 300px;
+  height: 50px;
+  line-height: 50px;
+  padding-left: 20px;
+  font-size: 20px;
+}
+
+li:active {
+  background-color: skyblue;
+  color: white;
+  border: 1px skyblue solid;
+}
+
+.alert-box3, .alert-box2, .alert-box1 {
+  border: none;
+  border-radius: 5px;
+  width: 700px;
+  height: 50px;
+  line-height: 50px;
+}
+
+.alert-box1 {
+  background: green;
+}
+
+.alert-box2 {
+  background: blue;
+}
+
+.alert-box3 {
+  background: orange;
+}
+
+.row {
+  display: flex;
+}
+
+.col-4, .col-6 {
+  width: 50px;
+  height: 50px;
+  border: solid 1px plum;
+}
+
+.col-6 {
+  width: 50%;
+}
+
+.col-4 {
+  width: 33.33%;
+}/*# sourceMappingURL=test.css.map */

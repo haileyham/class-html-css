@@ -1,0 +1,12 @@
+body{
+  margin:0;
+}
+
+div{
+  box-sizing: border-box;
+}
+
+$메인칼라라 : brown;
+//파일명에 _언더바 하나 앞에 붙이면 css파일로 컴파일 하지 않음.(css파일로 만들지 말아주세욧)
+//@mixin $변수 이런것도 가져올 수 있음 >> test.scss에서 쓸 때는 
+// color : reset.$메인칼라; 이렇게 써야함

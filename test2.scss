@@ -1,0 +1,83 @@
+.sh-list {
+  li{
+  list-style:none;
+  padding:15px;
+  border: 1px solid #eee;
+  }
+  :hover{
+    background: skyblue;
+    color:white;
+  }
+}
+
+//셀렉터를 길게 나열하지 않고 Nesting문법으로 {}집어넣음 > css 상에서는 
+//알아서 정리되어있음.
+
+// %alert-box{
+//   padding:10px;
+//   border: 1px solid #eee;
+//   border-radius: 5px;
+//   color: white;
+// }
+
+.alert-box-green{
+  padding:10px;
+  border: 1px solid #eee;
+  border-radius: 5px;
+  background: green;
+  color: white;
+}
+
+.alert-box-yellow{
+  @extend .alert-box-green;
+  background:orange;
+}
+
+.alert-box-blue{
+  @extend .alert-box-green;
+  background:skyblue;
+}
+
+
+//extend를 사용하여 .alert-box-green을 기본으로 복붙하여 집어넣음 (%사용할 경우 임시클래스임)
+
+
+
+
+
+
+div{
+  box-sizing: border-box;
+}
+
+@mixin column($구멍){
+  float:left;
+  width:$구멍;
+  padding:15px;
+}
+
+.row .col-6{
+  @include column(50%)
+}
+
+// .row {
+//   .col-6{
+//     float:left;
+//     width:50%;
+//     padding:10px;
+//   }
+// }
+
+.row .col-4{
+  @include column(33.33%)
+}
+// .row {
+//   .col-4{
+//     float:left;
+//     width:33.33%;
+//     padding:10px;
+//   }
+// }
+
+
+//@mixin쓰면 $ㅇㅇ 해놨을때 손쉽게 쓸 수 있음.

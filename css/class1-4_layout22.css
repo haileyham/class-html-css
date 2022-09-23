@@ -1,3 +1,56 @@
 .custom{
   color:skyblue;
 } 
+
+/* .pseudo::after{
+  content: ' hi';
+  color:red;
+} */
+
+
+input[type=file]::-webkit-file-upload-button{
+  background: pink;
+  border:none;
+  border-radius: 5px;
+}
+/*크롬 개발자도구 설정에서 shadow dom체크표시하면
+input file에 다른 것들도 나타남. 그 중에서 pesudo뒤에 있는 것 복사해서
+css로 꾸며주면 됨(크롬,사파리,edge에서만 적용//브라우저마다 다르기에 shadow DOM까서 보기)*/
+
+/*보통 위에보다는 labal태그(이거누르면 옆에꺼같이 적용시키게 활용) 이용해서 씀*/
+
+input::-webkit-input-placeholder{
+  color:aquamarine;
+}
+
+input[type=range]{
+  appearance:none;
+}
+
+input[type=range]::-webkit-slider-thumb{
+  appearance:none; /*브라우저 기본 css안보이게 이거때문에 width,height줘야 보임*/
+  background:pink;
+  width:30px;
+  height:30px;
+  border-radius: 30px;
+}
+
+
+progress{
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: white;
+}
+
+progress::-webkit-progress-bar {
+  background-color: #eee;
+  border-radius: 10px;
+}
+
+progress::-webkit-progress-value {
+  background: linear-gradient(to top right, purple, pink);
+  border-radius: 10px;
+}
+
+/*https://velog.io/@starkdy/Shadow-DOM%EC%9D%84-%EC%9D%B4%EC%9A%A9%ED%95%9C-Progress-bar-%EA%BE%B8%EB%AF%B8%EA%B8%B0*/

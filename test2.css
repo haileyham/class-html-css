@@ -1,0 +1,41 @@
+.sh-list li {
+  list-style: none;
+  padding: 15px;
+  border: 1px solid #eee;
+}
+.sh-list :hover {
+  background: skyblue;
+  color: white;
+}
+
+.alert-box-green, .alert-box-blue, .alert-box-yellow {
+  padding: 10px;
+  border: 1px solid #eee;
+  border-radius: 5px;
+  background: green;
+  color: white;
+}
+
+.alert-box-yellow {
+  background: orange;
+}
+
+.alert-box-blue {
+  background: skyblue;
+}
+
+div {
+  box-sizing: border-box;
+}
+
+.row .col-6 {
+  float: left;
+  width: 50%;
+  padding: 15px;
+}
+
+.row .col-4 {
+  float: left;
+  width: 33.33%;
+  padding: 15px;
+}/*# sourceMappingURL=test2.css.map */
