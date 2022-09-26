@@ -1,0 +1,351 @@
+body{
+  margin: 0;
+}
+
+/* .ani-text{
+  transform:rotate(5deg);
+} */
+/* 
+.ani-text{
+  transform:translateX(100px);
+} */
+/* 
+.ani-text{
+  transform:scale(0.8);
+} */
+
+
+.ani-text{
+  text-align: center;
+}
+
+.ani-text:hover{
+  animation-name:왔다갔다;
+  animation-duration:1s;
+  animation-delay:0.5s;
+  animation-timing-function:ease-in;
+  animation-iteration-count: 3;
+}
+
+/*@keyframe과 animation-name & animation-duration은 필수
+나머지는 선택 
+animation-iteration-count:반복횟수
+animation-timing-function:베지어(처음빨리,나중빨리 등등)
+
+transform 쓰면 좋은점
+1. 성능 좋음(margin-left이거보다 transform이 더 빠름
+웹브라우저 처리 단계 (1.render tree만들기/2.layout잡기/3.paint하기/4.composite처리
+이기 때문에 margin이용하면 2-4단계 다시 하느라 시간걸림)
+2. transform이런건 다른 쓰레드에서 처리해줌(다른 공간에서 처리)
+
+will-change
+3D animation사기치기 사용하면 성능개선 가능
+*/
+
+@keyframes 왔다갔다 {
+  0%{
+    transform: translateX(0px);
+  }
+  50%{
+    transform: translateX(-100px);
+  }
+  75%{
+    transform: translateX(100px);
+  }
+  100%{
+    transform: translateX(0px);
+  }
+}
+
+/*@keyframes 작명{} / 0%>50%>100% 애니메이션 각 진행도에 따라 스타일 입힘*/
+
+
+/*transform 은 어떤 요소를 독립적으로 움직이게 만들고 싶을 때 사용합니다.
+
+본인 원래 위치에서 자유롭게 (다른 요소에 영향 없이) 이동하게 됩니다.
+
+rotate는 회전, translate는 좌표이동, scale은 확대축소, skew는 비틀기 입니다. 
+
+
+
+복잡한 애니메이션 구현법
+
+
+
+예전 간단한 a -> b 애니메이션들은 
+
+시작스타일, 최종스타일, 트리거, transition 주면 된다고 했습니다. 
+
+근데 a -> b -> a,  a -> 1초정지 -> b 같은 복잡한건 못합니다.
+
+@keyframes를 쓰면 가능합니다. 
+*/
+
+
+
+/* 성능 잡을 수 있는 여러 방법1. will-change 쓰면 됩니다.
+
+.box {
+  will-change: transform;
+} 
+
+애니메이션을 주는 .box가 약간 느리게 동작한다면 
+
+will-change : 애니메이션줄속성;
+
+이걸 써놓으면 성능개선이 가능합니다. 바뀔 내용을 미리 렌더링해주는 속성이라 그렇습니다.
+
+뭔가 이상하게 버벅일 때만 쓰시고 애니메이션이 스무스하게 잘 된다면 쓸 이유는 없습니다.
+
+이상하게 많이 쓰면 브라우저 자체가 더 느려질 수 있습니다.
+
+
+성능 잡을 수 있는 여러 방법2. 하드웨어 가속
+
+
+
+애니메이션이 너무 많아 CPU만으로 전부 연산이 불가능하다면
+
+GPU의 도움을 받을 수도 있습니다.
+
+
+.box {
+  transform: translate3d(0, 0, 0);
+}
+
+
+transform : translate3d를 쓰면 3D 이동도 가능한데
+
+이 속성의 경우 GPU를 사용해서 연산하게 됩니다.
+
+그래서 translate3d(0, 0, 0) 이런 식으로 아무데도 움직이지 않는 3D 이동명령을 주고
+
+뒤에 필요한 transform을 더 적용한다면 
+
+GPU를 이용해서 .box가 가진 transform 속성들을 연산할 수 있습니다. 
+
+부담을 덜고싶을 때 사용하면 됩니다. 
+
+*/
+
+
+
+
+/*homework 3*/
+/*1. 마우스를 올리면 흔들리는 버튼 만들기*/
+
+.bt{
+  margin:30px;
+  background: skyblue;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding:15px;
+  font-size: 20px;
+}
+
+.bt:hover{
+  animation-name: 흔들버튼;
+  animation-duration: 0.5s;
+}
+
+@keyframes 흔들버튼{
+  0%{
+    transform: rotate(0deg);
+  }
+  25%{
+    transform: rotate(-10deg);
+  }
+  50%{
+    transform: rotate(10deg);
+  }
+  75%{
+    transform: rotate(-10deg);
+  }
+  100%{
+    transform: rotate(0deg);
+  }
+}
+
+
+/*2. 마우스를 올리면 회전하는 + 기호 + 확대 만들기*/
+
+
+.cross{
+  margin: 30px;
+  width:50px;
+  height:50px;
+  /* background: papayawhip; */
+  cursor: pointer;
+}
+
+.cross:before{
+  border-bottom: 10px solid pink;
+  transform: rotate(180deg) translateY(-20px);
+  display: block;
+  content:'';
+}
+
+.cross:after {
+  border-bottom: 10px solid pink;
+  transform: rotate(90deg) translateX(10px);
+  display:block;
+  content: '';
+}
+/*before,after로 +만들기*/
+
+
+.cross:hover{
+  animation-name: 회전커지기;
+  animation-duration: 1s;
+}
+
+@keyframes 회전커지기{
+  0%{
+    transform: rotate(0deg);
+  }
+  30%{
+    transform: rotate(-30deg);
+  }
+  100%{
+    transform: rotate(50deg) scale(1.5);
+  }
+}
+
+
+
+/*3. 슬라이드 메뉴 만들기
+- 마우스 올리면 검은 메뉴 우측 이동
+- 마우스 올리면 우측에 있던 Menu 글자는 가운데로*/
+
+/* .menu-bg{
+  display:block;
+  position: fixed;
+  width:100%;
+  height:100%;
+}
+.menu-slide{
+  width:20%;
+  height:100%;
+  background: black;
+  color:white;
+  padding: 30px;
+  left:-15%;
+  position:absolute;
+}
+
+.menu-slide h4{
+  text-align: center;
+}
+
+.menu-slide p{
+  text-align: center;
+}
+
+.menu-slide:hover{
+  animation-name: 슬라이드바슉;
+  animation-duration: 1s;
+}
+
+@keyframes 슬라이드바슉{
+  0%{
+    transform:translateX(0px);
+}
+  100%{
+    transform:translateX(100px);
+}
+} */
+
+
+
+/*숙제2 검토*/
+.ani-navbar{
+  width:200px;
+  height: 100%;
+  background: black;
+  color: white;
+  padding: 25px;
+  position: fixed; 
+  /*모든요소 앞에 존재하게하는것임*/
+  z-index: 5;
+  text-align: right; /*시작화면에서는 오른쪽으로*/
+  transform: translateX(-150px); /*시작화면에서 사이드바 안쪽으로 들어가있어야하니까 왼쪽으로 이동 집어넣기*/
+  transition: all 1s;  /*애니메이션으로 넣지말고 transition으로 넣기 hover할때 계속 유지됨*/
+}
+
+/*마우스 갖다댔을때 모양
+애니메이션 간단하기에 keyframe말고 위에 기본박스에 transition넣기*/
+.ani-navbar:hover{
+  transform: translateX(0px);
+  text-align: center;
+}
+
+/*안에 Item움직이는것, 복잡한 애니메이션이라 keyframe으로 주기
+안쪽으로 들어갔다가 바깥쪽으로나왔다가 제자리*/
+@keyframes slide{
+  0%{transform: translateX(-200px)}
+  50%{transform: translateX(30px) skewX(-30deg)}
+  100%{transform: translateX(0px)}
+}
+
+/*hover했을때 p에 적용해주세요*/
+.ani-navbar:hover p {
+  animation-name:slide;
+  animation-duration: 1s;
+}
+
+
+
+/*숙제검토ㅡㅡㅡㅡㅡㅡㅡㅡ*/
+
+.ani-button {
+  padding: 15px 20px;
+  font-size: 20px;
+  background: skyblue;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  /* display: block; */
+  margin: 30px auto;
+}
+
+.ani-button:hover {
+  animation-name: shake;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes shake {
+  0% { transform: rotate(0deg);}
+  25% { transform: rotate(-8deg);}
+  50% { transform: rotate(8deg);}
+  75% { transform: rotate(-8deg);}
+  100% { transform: rotate(0deg);}
+} 
+
+
+
+
+
+.ani-x {
+  margin: 150px auto;
+  text-align: center;
+  font-size: 70px;
+  width: 84px;
+  cursor: pointer;
+}
+
+.ani-x:hover {
+  animation-name: turn;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes turn {
+  0% { transform: rotate(0deg) }
+  25% { transform: rotate(-15deg) }
+  100% { transform: rotate(45deg) scale(1.5)}
+} 
+
+
+
