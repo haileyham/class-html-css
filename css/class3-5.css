@@ -15,6 +15,15 @@
   border: 1px solid pink;
 }
 
+@media screen and (max-width:768px){
+  .grid-container{
+    grid-template-areas: 
+    "헤더 헤더 헤더 헤더"
+    "사이드 사이드 사이드 사이드"
+    "콘텐츠 콘텐츠 콘텐츠 콘텐츠";
+    grid-template-rows: 100px 100px 300px;
+  }
+}
 /*레이아웃 만들려면 
 옵션1. 내부박스 크기조절
 옵션2. 그냥 부모 건드리기 
@@ -59,36 +68,68 @@
 
 
 
+
+/*숙제*/
+
+/*나는 grid-template-area로 했는데 부모태그 말고 자식에다가 grid주는 방법1로
+> 일단 grid-template-columns:1fr 1fr 1fr 가로 1칸씩 3개 차지하도록 설정하고
+자식태그에 grid-column과 grid-row로 주는데 첫번째 이미지 div박스에만
+class부여해서 grid조정하기. 그러면 나머지 알아서 위치함.(원래 3*2되어있던것을
+첫번째 이미지만 크게 키운것
+모바일에서는 grid-template-columns:1fr;만 주면 가로 1칸씩 차지함
+근데 왜 적용이 안되징..?ㅇ?)
+wow...미디어쿼리쓸때 @media screen and (max-width:768px)
+띄어쓰기 잘해야함 ㅠ and뒤에 띄어쓰기 안해서 오류났던거였음..
+*/
+
+
 .grid-container2{
   display:grid;
-  grid-template-columns: 200px 200px 200px;
-  grid-template-rows: 200px 200px 200px;
-  grid-template-areas:
+  max-width: 600px;
+  margin:auto;
+  grid-template-columns: 1fr 1fr 1fr;
+  /* grid-template-columns: 200px 200px 200px;
+  grid-template-rows: 200px 200px 200px; */
+  /* grid-template-areas:
   "m1 m1 m2"
   "m1 m1 m3"
-  "m4 m5 m6";
+  "m4 m5 m6"; */
 }
 
 .grid-container2 img{
-  width:200px;
-  height:200px;
+  width:100%;
+  display:block;
+  /*이미지 흰테두리공간생긴거 없애줌*/
 }
 
-.grid-m1 img{
-  grid-area:m1;
+.grid-m1{
+  grid-column: 1/3;
+  grid-row:1/3;
+  /* grid-area:m1;
   width:400px;
-  height:400px;
+  height:400px; */
 }
 
-.grid-m2{
+
+@media screen and (max-width:768px) {
+  .grid-m1{
+    grid-column: 1/2;
+    grid-row: 1/2;
+  }
+  .grid-container2{
+    grid-template-columns: 1fr;
+  }
+}
+
+/* .grid-m2{
   grid-area: m2;
-}
+} */
 
-.grid-m3{
+/* .grid-m3{
   grid-area:m3;
-}
+} */
 
-.grid-m4{
+/* .grid-m4{
   grid-area:m4;
 }
 
@@ -98,4 +139,4 @@
 
 .grid-m6{
   grid-area: m6;
-}
+} */
