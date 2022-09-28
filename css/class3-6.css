@@ -1,0 +1,27 @@
+body{
+  background: gray;
+  height:3000px;
+}
+
+.gray{
+  background: lightgray;
+  height:2000px;
+  margin-top:500px;
+}
+
+.image{
+  float:right;
+  width:400px;
+  position: sticky;
+  top:100px;
+}
+
+/*position:sticky쓰고서 어디에 고정될지 top:100px;
+position:fixed랑 비슷한데, fixed항상 고정되어있고
+position:sticky는 조건부로 고정(top:100px에서 고정+부모박스 넘어가면 해제)
+*/
+
+.text{
+  float:left;
+  width:300px;
+}
